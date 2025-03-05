@@ -43,6 +43,12 @@ class Complex
 		this.img = (A.real*B.real)+(A.img*B.img);
 		
 	}
+	public void div(Complex A,Complex B)
+	{
+		this.real = (((A.real * B.real) + (A.img * B.img)) / ((B.real * B.real)+ (B.img * B.img)));
+		this.img = (((B.real * A.img) - (A.real * B.img)) / ((B.real * B.real)+ (B.img * B.img)));
+		
+	}
 	
 }
 public class ComplexNo
@@ -78,6 +84,10 @@ public class ComplexNo
 		c_3.display();
 		c_4.display();
 		c_5.display();
+		
+		Complex c_6 = new Complex();
+		c_6.div(c_1, c_2);
+		c_6.display();
 		sc.close();
 		}
 	
